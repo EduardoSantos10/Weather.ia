@@ -85,7 +85,7 @@ def processar_comandos_telegram(on_nova_localizacao=None): # Lê novas interaç�
             estado["longitude"] = lon                      # Salva nova longitude no estado
             salvar_estado(estado)                          # Persiste no JSON imediatamente
             enviar_mensagem_telegram(                      # Confirma atualização no Telegram (e no relógio)
-                f"GPS atualizado: lat {lat:.4f}, lon {lon:4.f}. Checando clima..."
+                f"GPS atualizado: lat {lat:.4f}, lon {lon:.4f}. Checando clima..."
             )
             if callable(on_nova_localizacao): # Se o main.py passou o callback para checar o clima na hora
                 on_nova_localizacao(lat, lon) # Dispara verificação imediata nas novas coordenadas
