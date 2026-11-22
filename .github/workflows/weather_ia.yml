@@ -16,7 +16,7 @@ jobs:                          # Agrupa os conjuntos de passos que serão execut
             - name: Configurar Python       # Passo 02: Instala e seleciona a versão do Python no ambiente
               uses: actions/setup-python@v5 # Action oficial para configurar o interpretador do Python
               with:                         # Parâmetros de configuração do Python
-                python-version: "3.8"       # Define a versão do Python a ser utilizada
+                python-version: "3.11"       # Define a versão do Python a ser utilizada
 
             - name: Instalar dependencias # Passo 03: Instala as bibliotecas listadas no requirements.txt
               run: | # Permite executar múltiplos comandos do shell no Linux runner
